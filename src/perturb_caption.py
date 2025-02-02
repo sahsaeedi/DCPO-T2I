@@ -5,7 +5,6 @@ import numpy as np
 from PIL import Image
 from io import BytesIO
 import time
-from nltk.tokenize import  sent_tokenize
 
 from tqdm import tqdm
 import json
