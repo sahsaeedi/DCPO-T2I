@@ -66,6 +66,14 @@ To create the Pick-Double Caption Dataset, we first generated captions for prefe
 </div><br>
 <p align="center">Examples of Pick-Double Caption dataset</p>
 
+Below is an example perurbation command:
+
+```bash
+python perturb_caption.py \
+  --hf_file=$DATASET_NAME \
+  --out_folder=$OUTDIR \ 
+```
+
 Our work can be found via our Hugging Face Hub organization: https://huggingface.co/DualCPO.
 
 
