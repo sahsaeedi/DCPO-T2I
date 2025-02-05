@@ -20,7 +20,7 @@ _By: Amir Saeidi<sup>\*</sup>, Yiran Luo<sup>\*</sup>, Agneet Chatterjee, Shaman
 
 ### Hardware requirements
 
-We ran our experiments on a node of 8 A100s (80GB). But `train.py` can run on a single GPU having at least 40GB VRAM. 
+We ran our experiments on a node of 8 A100s (80GB). But `dcpo_trainer.py` can run on a single GPU having at least 40GB VRAM. 
 
 ### Environment
 
@@ -56,10 +56,10 @@ accelerate launch dcpo_trainer.py \
   --beta_dpo 500 \
 ```
 
-
+> Note: `caption_0` and `caption_1` refer to the caption of image 0 and image 1 in the Pick-Double Caption dataset, similar to the Pick-a-Pic dataset.
 ## Pick-Double Caption Dataset
 
-To create Pick-Double Caption Dataset. First we generated captions for prefered and less prefered imagess by [LLava-v1.6-34b](https://huggingface.co/liuhaotian/llava-v1.6-34b) and [Emu2](https://huggingface.co/BAAI/Emu2) models. Then we used [DIPPER](https://huggingface.co/kalpeshk2011/dipper-paraphraser-xxl) model to perturbed the generated caption of less prefered images, we refer the readers to Appendix D for more information about perturbation.
+To create the Pick-Double Caption Dataset, we first generated captions for preferred and less preferred images in [`yuvalkirstain/pickapic_v2`](https://huggingface.co/datasets/yuvalkirstain/pickapic_v2) dataset using the [LLava-v1.6-34b](https://huggingface.co/liuhaotian/llava-v1.6-34b) and [Emu2](https://huggingface.co/BAAI/Emu2) models. Then, we used the [DIPPER](https://huggingface.co/kalpeshk2011/dipper-paraphraser-xxl) model to perturb the generated captions of less preferred images. We refer readers to Appendix D in DCPO paper for more information about perturbation.
 
 <div align="center">
 <img src="assets/pick_double_caption_examples.png" width=750/>
