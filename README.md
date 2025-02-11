@@ -84,5 +84,13 @@ We thank the Research Computing (RC) at Arizona State University (ASU) and [cr8d
 ## Citation
 
 ```bibtex
----
+@misc{saeidi2025dualcaptionpreferenceoptimization,
+      title={Dual Caption Preference Optimization for Diffusion Models}, 
+      author={Amir Saeidi and Yiran Luo and Agneet Chatterjee and Shamanthak Hegde and Bimsara Pathiraja and Yezhou Yang and Chitta Baral},
+      year={2025},
+      eprint={2502.06023},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2502.06023}, 
+}
 ```
