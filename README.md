@@ -13,7 +13,7 @@ _By: Amir Saeidi<sup>\*</sup>, Yiran Luo<sup>\*</sup>, Agneet Chatterjee, Shaman
 **Contents**:
 
 * [Running DCPO training](#running-dcpo-training)
-* [Pick-Double Caption Dataset](#dataset) 
+* [Pick-Double Caption Dataset](#pick-double-caption-dataset) 
 * [Citation](#citation)
 
 ## Running DCPO training
@@ -57,6 +57,7 @@ accelerate launch dcpo_trainer.py \
 ```
 
 > Note: `caption_0` and `caption_1` refer to the caption of image 0 and image 1 in the Pick-Double Caption dataset, similar to the Pick-a-Pic dataset.
+
 ## Pick-Double Caption Dataset
 
 To create the Pick-Double Caption Dataset, we first generated captions for preferred and less preferred images in [`yuvalkirstain/pickapic_v2`](https://huggingface.co/datasets/yuvalkirstain/pickapic_v2) dataset using the [LLava-v1.6-34b](https://huggingface.co/liuhaotian/llava-v1.6-34b) and [Emu2](https://huggingface.co/BAAI/Emu2) models. Then, we used the [DIPPER](https://huggingface.co/kalpeshk2011/dipper-paraphraser-xxl) model to perturb the generated captions of less preferred images. We refer readers to Appendix D in DCPO paper for more information about perturbation.
