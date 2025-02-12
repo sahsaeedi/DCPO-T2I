@@ -75,6 +75,21 @@ python perturb_caption.py \
   --out_folder=$OUTDIR \ 
 ```
 
+## Evaluation
+We followed the respective official codebases for evaluation with metrics like Pickscore, HPSv2.1, and ImageReward.
+* **Pickscore** - https://github.com/yuvalkirstain/PickScore?tab=readme-ov-file#inference-with-pickscore
+* **HPSv2.1** - https://github.com/tgxs002/HPSv2?tab=readme-ov-file#image-comparison
+* **ImageReward** - https://github.com/THUDM/ImageReward
+
+We calculate the CLIPScore using Torchmetrics 
+* **CLIPScore** - https://lightning.ai/docs/torchmetrics/stable/multimodal/clip_score.html
+
+We evaluate our model with GenEval based on the official repository
+* **GenEval** - https://github.com/djghosh13/geneval 
+
+<br>
+
+
 Our work can be found via our Hugging Face Hub organization: https://huggingface.co/DualCPO.
 
 
